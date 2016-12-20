@@ -1,0 +1,123 @@
+body {
+  background: #333;
+  color: #000305;
+  font-size: 87.5%; /*base font size is 14px*/
+  font-family: Arial, 'Lucida Sans Unicode';
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+.wrapper{
+  margin: 0 auto;
+  padding: 1%;
+  min-height: 100%;
+  height: auto !important;
+  clear: both;
+}
+#logo {
+  float: left;
+  width:90%;
+  height:auto;
+  margin:2% 0%;
+  padding: 2% 2%;
+  background: #000 url('img/bg_banner.jpg');
+  font-size: 40px;
+  font-family: Courier, "Lucida Console", monospace;
+  font-weight: bolder;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  overflow: hidden;
+
+}
+#logo a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+#logo a:hover{
+  text-shadow: 4px 4px 5px red;
+}
+#navigation{
+  background-color: #666;
+  height: 40px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  float: left;
+  width:90%;
+  overflow: hidden;
+}
+#navLeft, #navRight{
+  list-style: none;
+  margin: 0 auto;
+}
+#navLeft li {
+  float: left;
+  text-decoration: none;
+}
+#navRight li {
+  float: right;
+  font: bold 10px Arial;
+}
+
+#navLeft a:link, #navLeft a:visited {
+  color:#FFF;
+  padding:10px 20px;
+  display:inline-block;
+  height:40px;
+}
+#navRight a:link, #navRight a:visited {
+  color:#FFF;
+  padding:15px 15px;
+  display:inline-block;
+  height:40px;
+}
+#navLeft a:hover, #navLeft a:active, #navLeft .active a:link, #navLeft .active a:visited {
+  background-color: #CF5C3F;
+  text-shadow:none;
+}
+#navLeft li a {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#mainContent{
+  float: left;
+  width:60%;
+}
+.topContent, .middleContent, .bottomContent{
+  background-color: #C0E2ED;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  line-height: 25px;
+  padding: 3% 5%;
+  margin: 10px 0;
+}
+#sidebar1{
+  display: block;
+  float:left;
+  width: 30%;
+}
+.top-sidebar, .middle-sidebar, .bottom-sidebar{
+  background-color: #C0E2ED;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  line-height: 25px;
+  padding: 3% 5%;
+  margin: 10px 0px 10px 10px;
+}
+
+.mainFooter {
+  float: left;
+  clear:both;
+}

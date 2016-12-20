@@ -1,34 +1,137 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title> JS events </title>
+    <title>My Marvellous BLOG</title>
     <link href="main.css" rel="stylesheet" type="text/css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <header>
-      <h1>Javascript Events</h1>
-    </header>
-    <main>
-      <ul id="checklist">
-        <li>
-          <span>Apples</span>
-          <input value="Apples">
-        </li>
-        <li>
-          <span>Oranges</span>
-          <input value="Oranges">
-        </li>
-        <li>
-          <span>Bananas</span>
-          <input value="Bananas">
-        </li>
-      </ul>
-    </main>
+  <div class="wrapper">
 
+    <div class="header">
+      <h1 id="logo"><a href="C:/Users/Stefan/Desktop/PROGRAMMING!/myMarvellousBLOG/index.html" title="MMB">MY MOST MARVELOUS BLOG</a></h1>
+    </div>
+
+    <div id="navigation">
+        <ul id="navLeft">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+
+        <ul id="navRight">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+
+    <div id="mainContent"><!--Blog posts-->
+        <article class="topContent">
+          <header>
+            <h2><a href="#" title="First post">First post</a></h2>
+          </header>
+          <footer>
+            <p class="post-info">This post was written by W. Blake..</p>
+          </footer>
+          <content>
+            <p>
+              I was angry with my friend:
+              I told my wrath, my wrath did end.
+              I was angry with my foe:
+              I told it not, my wrath did grow.
+
+              And I watered it in fears,
+              Night and morning with my tears;
+              And I sunnèd it with smiles,
+              And with soft deceitful wiles.
+
+              And it grew both day and night,
+              Till it bore an apple bright;
+              And my foe beheld it shine,
+              And he knew that it was mine,
+
+              And into my garden stole,
+              When the night had veiled the pole:
+              In the morning glad I see
+              My foe outstretched beneath the tree.
+            </p>
+          </content>
+        </article>
+
+        <article class="middleContent">
+          <header>
+            <h2><a href="#" title="Second post">Second post</a></h2>
+          </header>
+          <footer>
+            <p class="post-info">This post was written by Goethe..</p>
+          </footer>
+          <content>
+            <p>
+              Das Alter
+
+              Das Alter ist ein höflich' Mann:
+              Einmal übers andre klopft er an;
+              Aber nun sagt niemand: Herein!
+              Und vor der Türe will er nicht sein.
+              Da klinkt er auf, tritt ein so schnell,
+              Und nun heißt's, er sei ein grober Gesell.
+            </p>
+          </content>
+        </article>
+
+        <article class="bottomContent">
+          <header>
+            <h2><a href="#" title="Third post">Third post</a></h2>
+          </header>
+          <footer>
+            <p class="post-info">This post was written by Goethe..</p>
+          </footer>
+          <content>
+            <p>
+              Das Alter
+
+              Das Alter ist ein höflich' Mann:
+              Einmal übers andre klopft er an;
+              Aber nun sagt niemand: Herein!
+              Und vor der Türe will er nicht sein.
+              Da klinkt er auf, tritt ein so schnell,
+              Und nun heißt's, er sei ein grober Gesell.
+            </p>
+          </content>
+        </article>
+
+      </div>
+
+    <div id="sidebar1"><!--Side b+ars-->
+        <aside class="top-sidebar">
+          <article>
+            <h3>Top sidebar</h3>
+            <p>Side bar text<br>More sidebar text</p>
+          </article>
+        </aside>
+        <aside class="middle-sidebar">
+          <article>
+            <h3>Middle sidebar</h3>
+            <p>Side bar text</p>
+          </article>
+        </aside>
+        <aside class="bottom-sidebar">
+          <article>
+            <h3>Bottom sidebar</h3>
+            <p>Side bar text</p>
+          </article>
+        </aside>
+      </div>
+
+    <footer class="mainFooter">  <!--FOOTER-->
+      <p>Copyright &copy 2016, <a href="#" title="1stWebDesign">1st Web Design</a></p>
+    </footer>
+  </div>
     <!-- put <script> tags at the end of the webpage, so the content will load first and THEN the script runs, feels faster-->
     <script src="scripts/main.js"></script>
 

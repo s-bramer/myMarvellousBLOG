@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <title>Image Slidoor</title>
+  <link href="main.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="blueberry.css" type="text/css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script src="jquery.blueberry.js"></script>
+  <script>
+  $(window).load(function() {
+  	$('.blueberry').blueberry();
+  });
+  </script>
+</head>
+  <body>
+    <div class="wrapper">
+
+      <div class="header">
+        <h1 id="logo"><a href="C:/Users/Stefan/Desktop/PROGRAMMING!/myMarvellousBLOG/index.html" title="MY MOST MARVELOUS BLOG">MY MOST MARVELOUS BLOG</a></h1>
+      </div>
+
+      <div id="navigation">
+          <ul id="navLeft">
+            <li><a href="C:\Users\Stefan\Desktop\PROGRAMMING!\myMarvellousBLOG\index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Image Slider</a></li>
+          </ul>
+
+          <ul id="navRight">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+      </div>
+      <div id="content">
+       <div class="blueberry">
+        <ul class="slides">
+          <li><img src="img/wedding1.jpg" /></li>
+          <li><img src="img/wedding2.jpg" /></li>
+          <li><img src="img/wedding3.jpg" /></li>
+          <li><img src="img/wedding4.jpg" /></li>
+        </ul>
+       </div>
+      </div>
+    </div>
+  </body>
+</html>

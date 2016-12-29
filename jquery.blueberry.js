@@ -25,17 +25,17 @@
 
 			//default values for plugin options
 			var defaults = {
-				interval: 5000,
+				interval: 1000,
 				duration: 500,
 				lineheight: 1,
 				height: 'auto', //reserved
-				hoverpause: false,
-				pager: true,
+				hoverpause: false, //If 'true' the slides will pause when the cursor is hovering over them.
+				pager: false,
 				nav: true, //reserved
 				keynav: true
 			}
 			var options =  $.extend(defaults, options);
- 
+
 			return this.each(function() {
 				var o = options;
 				var obj = $(this);
@@ -59,7 +59,7 @@
 
 				//hide all slides, fade in the first, add active class to first slide
 				slides.hide().eq(current).fadeIn(o.duration).addClass('active');
-				
+
 
 				//build pager if it doesn't already exist and if enabled
 				if(pager.length) {
@@ -145,8 +145,8 @@
 				$(window).resize(function(){
 					setsize();
 				});
-				
-				
+
+
 
 				//Add keyboard navigation
 

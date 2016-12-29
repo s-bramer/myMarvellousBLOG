@@ -19,7 +19,16 @@
  *
  */
 
-.blueberry { margin: 0 auto; }
+ * {
+ 	margin: 0;
+ 	border: 0;
+ 	padding: 0;
+ }
+
+.blueberry {
+	margin: 0 auto;
+	max-width: 800px;
+}
 .blueberry .slides {
 	display: block;
 	position: relative;
@@ -35,10 +44,9 @@
 	display: block;
 	width: 100%;
 	max-width: none;
-	align-self: center;
 }
-/*.blueberry .slides li.active { display: block; position: relative; }
-.blueberry .crop li img { width: auto; }*/
+.blueberry .slides li.active { display: block; position: relative; }
+.blueberry .crop li img { width: auto; }
 
 .blueberry .pager {
 	height: 40px;
@@ -52,16 +60,18 @@
 	width: 4px;
 }
 .blueberry .pager li a {
-	padding: 18px 8px;
--webkit-border-radius: 6px;
+	margin-top: 8px;
+	padding: 8px 8px;
+/*-webkit-border-radius: 6px;
    -moz-border-radius: 6px;
-	border-radius: 6px;
+	border-radius: 6px;*/
+	border: 0;
 }
 .blueberry .pager li a span {
 	overflow: hidden;
 	background: #c0c0c0;
 	text-indent: -9999px;
--webkit-border-radius: 2px;
+ -webkit-border-radius: 2px;
    -moz-border-radius: 2px;
 	border-radius: 2px;
 }

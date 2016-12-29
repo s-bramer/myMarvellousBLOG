@@ -1,5 +1,10 @@
+* {
+ margin: 0;
+ border: 0;
+ padding: 0;
+}
+
 body {
-  background: #333;
   color: #000305;
   font-size: 87.5%; /*base font size is 14px*/
   font-family: Arial, 'Lucida Sans Unicode';

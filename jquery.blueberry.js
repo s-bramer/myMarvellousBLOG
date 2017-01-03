@@ -25,12 +25,12 @@
 
 			//default values for plugin options
 			var defaults = {
-				interval: 1000,
+				interval: 3000,
 				duration: 500,
 				lineheight: 1,
 				height: 'auto', //reserved
 				hoverpause: false, //If 'true' the slides will pause when the cursor is hovering over them.
-				pager: false,
+				pager: true, 
 				nav: true, //reserved
 				keynav: true
 			}

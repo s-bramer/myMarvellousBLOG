@@ -1,12 +1,17 @@
 [
   {
-    "name": "We’ll Go No More A-Roving",
-    "author": "written by Lord Byron",
-    "content": "So, we’ll go no more a-roving<br>So late into the night,<br>Though the heart be still as loving,<br>And the moon be still as bright."
+    "name": "Poem 2222",
+    "author": "written by William Blake",
+    "content": "I was angry with my friend:<br>I told my wrath, my wrath did end.<br>I was angry with my foe:<br>I told it not, my wrath did grow.<br><br>"
   },
   {
-    "name": "Das Alters",
+    "name": "We’ll Go No More A-Roving",
+    "author": "written by Lord Byron",
+    "content": "So, we’ll go no more a-roving<br>So late into the night,<br>Though the heart be still as loving,<br>And the moon be still as bright.<br><br>"
+  },
+  {
+    "name": "Das AAooaalters",
     "author": "written by J.W. Goethe",
-    "content": "Das Alter ist ein höflich' Mann:<br>So late into the night,<br>Though the heart be still as loving,<br>And the moon be still as bright."
+    "content": "Das Alter ist ein höflich' Mann:<br>So late into the night,<br>Though the heart be still as loving,<br>And the moon be still as bright.<br><br>"
   }
 ]

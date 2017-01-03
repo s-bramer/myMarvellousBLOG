@@ -38,26 +38,25 @@ function renderPosts(posts) {
   })
 }
 
-//create array of post objects for author, content and header
+// Fetches the file "main.json" and passes the parsed JSON object
+// into the given callback function.
 function getPosts(callback){
-var posts = [
-    {
-      "name": "Poem 1",
-      "author": "written by William Blake",
-      "content": "I was angry with my friend:<br>I told my wrath, my wrath did end.<br>I was angry with my foe:<br>I told it not, my wrath did grow.<br><br>"
-    },
-    {
-      "name": "We’ll Go No More A-Roving",
-      "author": "written by Lord Byron",
-      "content": "So, we’ll go no more a-roving<br>So late into the night,<br>Though the heart be still as loving,<br>And the moon be still as bright.<br><br>"
-    },
-    {
-      "name": "Das AAooaalters",
-      "author": "written by J.W. Goethe",
-      "content": "Das Alter ist ein höflich' Mann:<br>So late into the night,<br>Though the heart be still as loving,<br>And the moon be still as bright.<br><br>"
-    }
-  ];
-  callback(posts);
+
+  // Fetch the JSON file using XMLHttpRequest.
+  // taken from Curran's screencasts (https://github.com/curran)
+  var request = new XMLHttpRequest();
+
+  // When the file has loaded,
+  request.onload = function () {
+
+    // parse the JSON text into an array of post objects.
+    var posts = JSON.parse(request.responseText);
+
+    // Pass the posts array to the callback.
+    callback(posts);
+  };
+  request.open("GET", "main.json", true);
+  request.send(null);
 }
 // The main call which gets then renders posts.
 getPosts(function (posts) {

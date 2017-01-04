@@ -1,64 +1,70 @@
-//Add DOM structure for each post.
-function renderPosts(posts) {
+//wrap js functions in self-invoking function
+//avoid polluting the global namespace
+(function () {
 
-  //grab the DOM element with blog posts
-  var postsDiv = document.getElementById("main-content");
-  //copy shareFooter and append to blog post
-  // var elmnt = document.getElementById("share-footer");
-  // var cln = elmnt.cloneNode(true);
+  //Add DOM structure for each post.
+  function renderPosts(posts) {
 
-  posts.forEach(function(post){
-    //create outer Div Element
-    var postDiv = document.createElement("div");
-    //create inner Divs Element
-    var postNameDiv = document.createElement("div");
-    var postAuthorDiv = document.createElement("div");
-    var postContentDiv = document.createElement("div");
+    //grab the DOM element with blog posts
+    var postsDiv = document.getElementById("main-content");
+    //copy shareFooter and append to blog post
+    // var elmnt = document.getElementById("share-footer");
+    // var cln = elmnt.cloneNode(true);
 
-    //Set the content of each element
-    postNameDiv.innerHTML = post.name;
-    postAuthorDiv.innerHTML = post.author;
-    postContentDiv.innerHTML = post.content;
+    posts.forEach(function(post){
+      //create outer Div Element
+      var postDiv = document.createElement("div"),
+      //create inner Divs Element
+          postNameDiv = document.createElement("div"),
+          postAuthorDiv = document.createElement("div"),
+          postContentDiv = document.createElement("div");
 
-    //Set CSS classes on each div for styling
-    postDiv.setAttribute("class", "blog-content");
-    postNameDiv.setAttribute("class", "blog-header");
-    postAuthorDiv.setAttribute("class", "post-info");
-    postContentDiv.setAttribute("class", "blog-txt");
+      //Set the content of each element
+      postNameDiv.innerHTML = post.name;
+      postAuthorDiv.innerHTML = post.author;
+      postContentDiv.innerHTML = post.content;
 
-    postDiv.appendChild(postNameDiv);
-    postDiv.appendChild(postAuthorDiv);
-    postDiv.appendChild(postContentDiv);
+      //Set CSS classes on each div for styling
+      postDiv.setAttribute("class", "blog-content");
+      postNameDiv.setAttribute("class", "blog-header");
+      postAuthorDiv.setAttribute("class", "post-info");
+      postContentDiv.setAttribute("class", "blog-txt");
 
-    //append the share footer
-    //postDiv.appendChild(cln);
+      postDiv.appendChild(postNameDiv);
+      postDiv.appendChild(postAuthorDiv);
+      postDiv.appendChild(postContentDiv);
 
-    postsDiv.appendChild(postDiv);
+      //append the share footer
+      //postDiv.appendChild(cln);
 
-  })
-}
+      postsDiv.appendChild(postDiv);
 
-// Fetches the file "main.json" and passes the parsed JSON object
-// into the given callback function.
-function getPosts(callback){
+    })
+  }
 
-  // Fetch the JSON file using XMLHttpRequest.
-  // taken from Curran's screencasts (https://github.com/curran)
-  var request = new XMLHttpRequest();
+  // Fetches the file "main.json" and passes the parsed JSON object
+  // into the given callback function.
+  function getPosts(callback){
 
-  // When the file has loaded,
-  request.onload = function () {
+    // Fetch the JSON file using XMLHttpRequest.
+    // taken from Curran's screencasts (https://github.com/curran)
+    var request = new XMLHttpRequest();
 
-    // parse the JSON text into an array of post objects.
-    var posts = JSON.parse(request.responseText);
+    // When the file has loaded,
+    request.onload = function () {
 
-    // Pass the posts array to the callback.
-    callback(posts);
-  };
-  request.open("GET", "main.json", true);
-  request.send(null);
-}
-// The main call which gets then renders posts.
-getPosts(function (posts) {
-  renderPosts(posts);
-});
+      // parse the JSON text into an array of post objects.
+      var posts = JSON.parse(request.responseText);
+
+      // Pass the posts array to the callback.
+      callback(posts);
+    };
+    request.open("GET", "main.json", true);
+    request.send(null);
+  }
+  
+  // The main call which gets then renders posts.
+  getPosts(function (posts) {
+    renderPosts(posts);
+  });
+}());
